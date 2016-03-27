@@ -1,4 +1,4 @@
-# plot1.R
+# plot2.R
 #
 # Using the base plotting system, make a plot showing the total PM2.5 emission from all sources
 # for each of the years 1999, 2002, 2005, and 2008.
@@ -19,11 +19,16 @@ if (!exists("SCC")) {
         SCC <- readRDS("Source_Classification_Code.rds")
 }
 
-# Get the sum of PM25 for all years
-totalsByYears <- tapply(NEI$Emissions, NEI$year, sum)
+# Get subset of Baltimore
+baltimore <- subset(NEI, NEI$fips == "24510")
+# Get sums of all years for Baltimore
+bcTotals <- tapply(baltimore$Emissions, baltimore$year, sum)
 # plot with points and lines
-plot(names(totalsByYears), totalsByYears, type="b", xlab = "Year", ylab = expression("Total" ~ PM[2.5] ~"Emissions (tons)"),
+plot(names(bcTotals), 
+     bcTotals, type="b", xlab = "Year", 
+     ylab = expression("Total" ~ PM[2.5] ~"Emissions (tons)"), 
      main = expression("Total US" ~ PM[2.5] ~ "Emissions by Year"), col="red")
 # copy to png
-dev.copy(png, file="plot#1.png", height=480, width=480)
+dev.copy(png, file="plot#2.png", height=480, width=480)
 dev.off()
+

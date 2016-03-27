@@ -41,4 +41,6 @@ Source Classification Code Table (Source_Classification_Code.rds): This table pr
 <li>6. Compare emissions from motor vehicle sources in Baltimore City with emissions from motor vehicle sources in Los Angeles County, California (fips == "06037"). Which city has seen greater changes over time in motor vehicle emissions?</li>
 </ol>
 
-## <b>Answers</b> are in the corresponding number of the questions of each plot#.R and plot#.png.
+## <b>Answers</b> 
+
+Answers are in the corresponding number of the questions of each plot#.R and plot#.png.
