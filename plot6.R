@@ -41,7 +41,7 @@ gbc <- ggplot(combined, aes(year, Emissions, color = fips))
 gbc <- gbc + geom_line() + ylim(-100, 5500) +
         xlab("year") +
         ylab(expression('Total PM'[2.5]*" Emissions")) +
-        ggtitle('Total Emissions from motor vihecle (type is ON-ROAD) in Baltimore City, Maryland vs\n Los Angeles, California, from 1999 to 2008')
+        ggtitle('Total Emissions from motor vihecle (type is ON-ROAD)\nBaltimore City, Maryland vs Los Angeles, California\n from 1999 to 2008')
 print(gbc)
 
 # copy to png
